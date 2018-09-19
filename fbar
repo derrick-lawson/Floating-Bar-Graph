@@ -1,0 +1,17 @@
+bmax=bar(maxtempsJune,'r');
+title('Daily June 2018 Temperature & Precipitation at Farmingdale Republic Airport (Min to Max)','FontSize',14);
+xlabel('Day of the Month','FontSize',14);
+
+yyaxis left
+ylabel('Temperature in Degrees Fahrenheit','FontSize',14);
+hold on
+bmin=bar(mintempsJune,'w');
+bmin.EdgeColor='w';
+ylim([40 100]);
+xlim([0 31]);
+for c=1:30
+    text(c-0.4, maxtempsJune(c)+1.2,num2str(maxtempsJune(c)))
+end
+for c=1:30
+    text(c-0.4, mintempsJune(c)-0.9,num2str(mintempsJune(c)))
+end
